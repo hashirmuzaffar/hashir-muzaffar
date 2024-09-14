@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hashir's Life</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        /* CSS styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background-color: #f8f8f8;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        #main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        #sidebar h2 {
+            margin-top: 0;
+        }
+        #sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #sidebar ul li {
+            margin-bottom: 10px;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        #sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            flex: 50%;
+            padding: 10px;
+        }
+        .column.left {
+            flex: 2;
+        }
+        .column.right {
+            flex: 1;
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+            }
+            #sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            #main-content {
+                margin-left: 0;
+            }
+        }
+        img {
+            border-radius: 50%;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        form input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        #form-response {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('academic')">Academic Qualifications</a></li>
+            <li><a href="#" onclick="showPage('experience')">Professional Experience</a></li>
+            <li><a href="#" onclick="showPage('projects')">Major Projects</a></li>
+            <li><a href="#" onclick="showPage('activities')">Extra-Curricular Activities</a></li>
+            <li><a href="#" onclick="showPage('certifications')">Certifications</a></li>
+            <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+        <hr>
+        <p>Developed by Hashir | © 2024</p>
+    </div>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <h1>Hello, I'm Hashir!</h1>
+            <div class="row">
+                <div class="column left">
+                    <h2>Machine Learning | Generative AI | Computer Science</h2>
+                    <p>
+                        As a recent graduate from the Institute of Business Administration with a Bachelor of Science in Computer Science, I specialize in Generative AI and ML techniques. Currently, I am applying my expertise as a Junior AI Engineer at Kalorist, an early-stage incubated company. In this role, I play a pivotal part in developing KalCoach, a personalized fitness AI assistant designed to help users achieve their wellness goals.
+                        <br><br>
+                        My background includes a successful tenure as CFO of the IBA Student Government, where I managed a substantial budget with precision and data-driven insights. With strong skills in ML, NLP, and AI, combined with a drive to innovate, I am committed to digitalizing the world with intelligence.
+                    </p>
+                </div>
+                <div class="column right">
+                    <img src="hashir.jpg" alt="Hashir" style="width:100%;">
+                </div>
+            </div>
+        </div>
+        <!-- Academic Qualifications Page -->
+        <div id="academic" class="page">
+            <h1>Academic Qualifications</h1>
+            <h2>Institute of Business Administration, Karachi</h2>
+            <p><strong>BS Computer Science (2020 - 2024)</strong></p>
+            <ul>
+                <li>CGPA: 3.56 (Honorable Mention in The Dean’s List)</li>
+                <li>Papers: <a href="https://iba.academia.edu/HashirMuzaffar">Link</a></li>
+            </ul>
+            <h2>Army Public School, Bahawalpur</h2>
+            <p><strong>A LEVELS (2017 - 2019)</strong></p>
+            <ul>
+                <li>Subjects: Computer Science, Physics, Chemistry, Mathematics</li>
+                <li>Grades: 1A*, 3As</li>
+            </ul>
+            <p><strong>O LEVELS (2014 - 2017)</strong></p>
+            <ul>
+                <li>Subjects: Computer Science, Physics, Chemistry, Mathematics, English</li>
+                <li>Grades: 3A*s, 1A, 1B</li>
+            </ul>
+        </div>
+        <!-- Professional Experience Page -->
+        <div id="experience" class="page">
+            <h1>Professional Experience</h1>
+            <h2>Kalorist - Junior AI Engineer (March 2024 - Present)</h2>
+            <ul>
+                <li>Working on KalCoach, a personalized fitness AI assistant for Kalorist, by testing and implementing open-source text generation LLMs and text embedding.</li>
+                <li>Utilizing RAG and real-time data retrieval with LangChain to enhance the nutrition and health app's capabilities.</li>
+            </ul>
+            <h2>IBA Student Government - Treasurer (Aug 2023 - May 2024)</h2>
+            <ul>
+                <li>Financial Head of all student unions and societies within IBA, managing a budget of 14 million rupees.</li>
+                <li>Utilized advanced Excel functions and data analysis techniques to track expenses, forecast budget needs, and optimize financial allocations.</li>
+                <li>Acted as a bridge between students and Deans of different schools and the Director of IBA, using data-driven insights to effectively resolve student concerns and queries.</li>
+            </ul>
+            <h2>Institute of Business Administration Karachi - Teaching Assistant (Aug 2022 - Dec 2023)</h2>
+            <ul>
+                <li>Worked as Teaching Assistant for introductory level Computer Science courses.</li>
+                <li>Led independent lectures and tutorials on a weekly basis, graded quizzes, and assignments for 500+ students.</li>
+            </ul>
+            <h2>Discourse Analytics - AI Intern (Jun 2023 - Jul 2023)</h2>
+            <ul>
+                <li>Built an AI-powered email automation system using OpenAI models.</li>
+                <li>Customized responses by fine-tuning models with a previous dataset of emails. Developed email sending system API with Node.js.</li>
+                <li>Optimized model efficiency and cost-effectiveness through prompt engineering.</li>
+            </ul>
+            <h2>Institute of Business Administration - Research Assistant (Jan 2024 - Mar 2024)</h2>
+            <ul>
+                <li>Collaborated with the Project Lead to promote indigenous literature in academic research by identifying potential research profiles and strategizing outreach efforts to get local published work cited in local and international research endeavors.</li>
+            </ul>
+        </div>
+        <!-- Major Projects Page -->
+        <div id="projects" class="page">
+            <h1>Major Projects</h1>
+            <h2>Floor Plan Generation using Generative AI</h2>
+            <ul>
+                <li>Leveraged the power of generative AI and worked closely with my team to generate multi-story floor plans using Stable Diffusion Model, to enhance and build our own research on preexisting research.</li>
+            </ul>
+            <h2>Clothes Re-selling Website - Sycle</h2>
+            <ul>
+                <li>Utilized Typescript, MUI, React, and Figma for front-end design.</li>
+                <li>Used Node.js, Express, and Mongoose for back-end and database operations.</li>
+            </ul>
+            <h2>Data Mining and Analysis</h2>
+            <ul>
+                <li>Completed projects on Kaggle for classification, clustering, regression, and text analysis.</li>
+                <li>Used Python libraries like Pandas, NumPy, Scikit-learn, and NLTK and machine learning algorithms for analysis.</li>
+                <li>Applied techniques like feature engineering, model selection, and hyperparameter tuning to optimize performance.</li>
+                <li>Analyzed and visualized datasets to uncover patterns using Matplotlib and Seaborn.</li>
+            </ul>
+            <h2>Painting Store Web-Based Inventory</h2>
+            <ul>
+                <li>Rapidly developed a web application for an Art Dealership Management System, focusing on SQL and data science principles.</li>
+                <li>Designed and implemented a robust database on Oracle Database using SQL for efficient data storage, retrieval, and manipulation.</li>
+                <li>Utilized JAVA and OJDBC for seamless database connectivity and developed the front-end using HTML and CSS.</li>
+            </ul>
+            <h2>Computer Vision Based Volume Control Remote</h2>
+            <ul>
+                <li>Developed a motion-sensing remote to adjust volume via hand gestures using ML algorithms for real-time gesture recognition.</li>
+                <li>Used Python libraries like OpenCV and NumPy along with other open-source resources, to process and interpret gesture data.</li>
+            </ul>
+            <h2>Student Budgeting Android App – Wallit</h2>
+            <ul>
+                <li>Led a team to develop “Wallit,” an app to boost financial literacy.</li>
+                <li>Developed a full-stack mobile app leveraging JAVA and Firebase.</li>
+                <li>Designed UI in Figma and performed Junit testing.</li>
+            </ul>
+            <h2>End-to-End RAG Based Chatbot</h2>
+            <ul>
+                <li>Developed a complete end-to-end RAG based chatbot using LANGCHAIN and Gorq Fast API.</li>
+                <li>Created front-end using Python Streamlit.</li>
+            </ul>
+        </div>
+        <!-- Extra-Curricular Activities Page -->
+        <div id="activities" class="page">
+            <h1>Extra-Curricular Activities</h1>
+            <h2>AIESEC Turkey - Summer Volunteer (Jun 2021 - Aug 2021)</h2>
+            <ul>
+                <li>Interned as a Language and Culture Ambassador at Living It Gaziantep, taught English as a second language.</li>
+            </ul>
+            <h2>United Nations Association of Pakistan - Youth Member (Feb 2022 - Feb 2023)</h2>
+            <ul>
+                <li>Collected an amount of 10,000 PKR for Flood Relief in United Nations Association of Pakistan.</li>
+            </ul>
+            <h2>SHARE IBA - Strategy Manager (Jun 2023 - Nov 2023)</h2>
+            <ul>
+                <li>Analyzed concrete case studies to transform companies’ strategies to be more sustainable & inclusive as a member.</li>
+            </ul>
+            <h2>IBA Public Speaking Society - Assistant Director (Aug 2021 - Aug 2022)</h2>
+            <ul>
+                <li>Streamlined the digital payment process of MUNIK XII as Assistant Director of HR and Registration Department.</li>
+            </ul>
+            <h2>IBA Human Resource Club - Director (Aug 2021 - Aug 2022)</h2>
+            <ul>
+                <li>Derived strategies and marketing campaigns for IBA HR club events and organized career counseling sessions.</li>
+            </ul>
+        </div>
+        <!-- Certifications Page -->
+        <div id="certifications" class="page">
+            <h1>Certifications</h1>
+            <ul>
+                <li><strong>Fundamentals of UX</strong> - Google</li>
+                <li><strong>Computer Network and Communications</strong> - CISCO</li>
+                <li><strong>Introduction to Advanced Excel</strong> - IBM</li>
+                <li><strong>Excel for Data Analytics</strong> - IBM</li>
+                <li><strong>Deep Learning Essentials</strong> - 10Pearl University</li>
+                <li><strong>Introduction to Salesforce CRM</strong> - 10Pearl University</li>
+                <li><strong>Foundations of Project Management</strong> - Google</li>
+                <li><strong>Python Crash Course</strong> - Google</li>
+                <li><strong>Teamwork Foundation</strong> - LinkedIn</li>
+                <li><strong>Automation for Python</strong> - Google</li>
+            </ul>
+        </div>
+        <!-- Skills Page -->
+        <div id="skills" class="page">
+            <h1>Skills</h1>
+            <ul>
+                <li><strong>Proficient in:</strong> SQL, Python, SPSS-IBM, Excel-MS, and JAVA.</li>
+                <li><strong>Familiarity with:</strong> MERN, Golang, Pandas, NumPy, Scikit-learn, TensorFlow, LangChain, GitHub, and MochaJs.</li>
+            </ul>
+        </div>
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me through the following platforms:</p>
+            <ul>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hashir-muzaffar">Hashir Muzaffar</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/hashirmuzaffar">hashirmuzaffar</a></li>
+            </ul>
+            <!-- Contact Form -->
+            <h2>Contact Form</h2>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <label for="name">Your Name</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Your Email</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Your Message</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <input type="submit" value="Send">
+            </form>
+            <p id="form-response"></p>
+        </div>
+    </div>
+    <!-- JavaScript code -->
+    <script>
+        function showPage(pageId) {
+            // Get all pages
+            var pages = document.getElementsByClassName('page');
+            // Hide all pages
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+        // Show the home page by default when the page loads
+        window.onload = function() {
+            showPage('home');
+        };
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Simulate sending email
+            // For now, just display a success message
+            document.getElementById('form-response').innerText = 'Message sent!';
+            // Optionally, clear the form
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</body>
+</html>
