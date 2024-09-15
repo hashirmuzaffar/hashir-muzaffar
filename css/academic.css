@@ -1,9 +1,66 @@
-/* Academic Page Styles */
-h1, h2 {
-    color: #2c3e50;
-  }
-  
-  p {
-    font-size: 16px;
-  }
-  
+/* General Body Styling */
+body {
+  font-family: "Amatic SC", sans-serif;
+  background-color: #ffffd8;
+  padding: 20px;
+  margin: 0;  /* Ensure no margin is causing overflow */
+  max-width: 100vw; /* Ensure the body does not exceed the viewport width */
+  overflow-x: hidden; /* Prevent horizontal scroll bar */
+}
+
+h1 {
+  font-size: 42px; 
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 28px;
+  color: #555;
+}
+
+a {
+  font-size: 24px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Academic Card Styling */
+.academic-card {
+  background-color: #f4ecbe;
+  border: 1px solid #f4ecbe;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 100%; /* Make sure the card does not exceed the viewport width */
+  transition: transform 0.3s;
+}
+
+.academic-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom Font Styling */
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

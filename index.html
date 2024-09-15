@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
   <title>Hashir's Life</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="icon" href="assets/icons/icon.png" type="image/png">
@@ -13,14 +17,21 @@
   <!-- Horizontal Navigation -->
   <div class="horizontal-nav">
     <ul>
-      <li><a href="#" onclick="loadPage('index')">Home</a></li>
-      <li><a href="#" onclick="loadPage('academic')">Academic Qualifications</a></li>
-      <li><a href="#" onclick="loadPage('experience')">Professional Experience</a></li>
-      <li><a href="#" onclick="loadPage('projects')">Major Projects</a></li>
-      <li><a href="#" onclick="loadPage('activities')">Extra-Curricular Activities</a></li>
-      <li><a href="#" onclick="loadPage('certifications')">Certifications</a></li>
-      <li><a href="#" onclick="loadPage('skills')">Skills</a></li>
-      <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+      <li><a href="#home" onclick="loadPage('index')">Home</a></li>
+      <li><a>|</a></li>
+      <li><a href="#academic" onclick="loadPage('academic')">Academic Qualifications</a></li>
+      <li><a>|</a></li>
+      <li><a href="#experience" onclick="loadPage('experience')">Professional Experience</a></li>
+      <li><a>|</a></li>
+      <li><a href="#projects" onclick="loadPage('projects')">Projects</a></li>
+      <li><a>|</a></li>
+      <li><a href="#activities" onclick="loadPage('activities')">Extra-Curricular Activities</a></li>
+      <li><a>|</a></li>
+      <li><a href="#certifications" onclick="loadPage('certifications')">Certifications</a></li>
+      <li><a>|</a></li>
+      <li><a href="#skills" onclick="loadPage('skills')">Skills</a></li>
+      <li><a>|</a></li>
+      <li><a href="#contact" onclick="loadPage('contact')">Contact</a></li>
     </ul>
   </div>
 
@@ -73,7 +84,7 @@
   </div>
 
   <!-- Footer -->
-  <footer>
+  <footer id="site-footer">
     <p>Developed by Hashir | © 2024</p>
   </footer>
 

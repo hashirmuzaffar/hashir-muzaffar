@@ -1,5 +1,6 @@
 /* General layout styles */
 body {
+  font-family: "Amatic SC", sans-serif;
   margin: 0;
   font-family: Arial, sans-serif;
   height: 100vh;
@@ -24,26 +25,26 @@ body {
 }
 
 .horizontal-nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .horizontal-nav ul li a {
-  color: black;
+  font-family: "Amatic SC", sans-serif; /* Correct custom font usage */
+  color: #504e4e;
   text-decoration: none;
+  font-size: 2vw;
+}
+
+
+.horizontal-nav ul li a:hover {
   font-weight: bold;
 }
 
-.horizontal-nav ul li a:hover {
-  text-decoration: underline;
+.horizontal-nav ul li a.active {
+  font-weight: bold;
+  text-decoration:line-through; 
 }
 
-.horizontal-nav ul li::after {
-  content: " / ";
-}
-
-.horizontal-nav ul li:last-child::after {
-  content: "";
-}
 
 .content {
   padding-top: 80px;
@@ -90,6 +91,7 @@ body {
 }
 
 .bodytext {
+  font-family: "Amatic SC", sans-serif;
   color: #504e4e;
   font-size: 3vw;
 }
@@ -109,4 +111,16 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
